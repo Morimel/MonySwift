@@ -88,5 +88,11 @@ struct TurnOverTexts: View {
 }
 
 #Preview {
-    TurnOver(firstView: IncomeView(), secondView: ExpenseView())
+    StatefulPreviewWrapper(false) { isNavigating in
+        TurnOver(
+            firstView: IncomeView(),
+            secondView: ExpenseView(isNavigating: isNavigating)
+        )
+    }
 }
+

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ExpenseView: View {
+    @Binding var isNavigating: Bool
+
     let categories: [Category] = [
         Category(iconName: "cart", title: "Продукты", amount: 1400),
         Category(iconName: "house", title: "Аренда", amount: 8000),
@@ -41,16 +43,13 @@ struct ExpenseView: View {
                     isAddButton: true
                 )
                 .onTapGesture {
-                    print("Открыть форму добавления категории")
-                    // Здесь можешь показать Sheet / Navigation или что хочешь
+                    isNavigating = true
                 }
             }
             .padding()
         }
     }
 }
-
-
 
 
 struct IncomeView: View {
@@ -73,7 +72,7 @@ struct IncomeView: View {
                 ForEach(categories) { category in
                     Categories(category: category, width: itemWidth, height: itemHeight)
                 }
-
+                
                 // Кнопка "Добавить"
                 Categories(
                     category: Category(iconName: "plus", title: "Добавить", amount: 0),
@@ -82,14 +81,18 @@ struct IncomeView: View {
                     isAddButton: true
                 )
                 .onTapGesture {
-                    print("Добавить доход")
-                    // тут можно вызвать Sheet или форму
+                    //                    isNavigating = true
+                    print("fd")
                 }
             }
             .padding()
         }
     }
 }
+
 #Preview {
-    ExpenseView()
+    StatefulPreviewWrapper(false) { isNavigating in
+        ExpenseView(isNavigating: isNavigating)
+    }
 }
+

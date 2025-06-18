@@ -21,6 +21,11 @@
 			path = MonySwift;
 			sourceTree = "<group>";
 		};
+		FBB1743A2E009A2900EE3E8D /* Draft */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Draft;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +44,7 @@
 		FB1A5A642DF1AA7D00280B56 = {
 			isa = PBXGroup;
 			children = (
+				FBB1743A2E009A2900EE3E8D /* Draft */,
 				FB1A5A6F2DF1AA7D00280B56 /* MonySwift */,
 				FB1A5A6E2DF1AA7D00280B56 /* Products */,
 			);
@@ -69,6 +75,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				FB1A5A6F2DF1AA7D00280B56 /* MonySwift */,
+				FBB1743A2E009A2900EE3E8D /* Draft */,
 			);
 			name = MonySwift;
 			packageProductDependencies = (
